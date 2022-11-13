@@ -1,0 +1,175 @@
+@import "vars"
+@import "fonts"
+
+*
+    box-sizing: border-box
+body
+    +reg
+.container
+    max-width: 1721px
+    width: 96%
+    margin: auto
+    position: relative
+.button-hover
+    background-color: $button-bg
+    padding: 32px 64px
+    border-radius: 100px
+    border: none
+    color: $text
+    cursor: pointer
+    font-size: 22px
+    line-height: 30px
+    margin-right: 93px
+
+
+.navbar
+    padding: 70px 0 100px 0
+    z-index: 1
+    &-block
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__button
+            align-items: center
+            display: flex
+            padding: 14px 28px
+            border-radius: 83px
+            border: none
+            color: $text
+            font-size: 22px
+            line-height: 30px
+            background-color: $button-bg
+            +reg
+            img
+                margin-right: 10px
+        &__icons
+            a
+                margin-left: 24px
+                &:first-child
+                    margin-left: 0
+
+
+.header
+    padding: 70px 0 300px 0
+    &-block
+        display: flex
+        justify-content: space-between
+    &-text
+        flex-basis: 50%
+        &__title
+            font-size: 128px
+            line-height: 128px
+            color: $title
+            +bold
+            margin: 0 0 50px 0
+        &__desc
+            font-size: 22px
+            line-height: 30px
+            opacity: 0.65
+            color: $title
+            margin-bottom: 95px
+            display: block
+    &-buttons
+        align-items: center
+        display: flex
+        &__button
+            font-size: 22px
+            line-height: 30px
+            color: $button-bg
+            border: none
+            background-color: #fff
+            margin-right: 93px   
+            &:last-child
+                margin-right: 0               
+.button-phone
+    align-items: center
+    display: inline-flex
+    margin: 0
+    img
+        margin-right: 12px
+.header
+    &-slider
+        flex-basis: 50%
+        display: flex
+        justify-content: flex-end
+        &__image
+            img
+                position: absolute
+                top: -300px
+                right: -170px
+                z-index: -1
+    &-desc
+        background-color: $desc-bg
+        border-radius: 32px
+        padding: 32px 
+        max-width: 294px
+        max-height: 294px
+        position: relative
+        &__title
+            font-size: 36px
+            line-height: 40px
+            color: $text
+            +bold
+            margin: 0 0 14px 0
+        &__subtitle
+            font-size: 22px
+            line-height: 30px
+            color: rgba(255, 255, 255, 0.65)
+            display: flex
+            margin-bottom: 45px
+    &-parameters
+        background-color: $parameters-bg
+        border-radius: 32px
+        box-shadow: 0px 100px 80px rgba(155, 161, 167, 0.07), 0px 41.7776px 33.4221px rgba(155, 161, 167, 0.0503198), 0px 22.3363px 17.869px rgba(155, 161, 167, 0.0417275), 0px 12.5216px 10.0172px rgba(155, 161, 167, 0.035), 0px 6.6501px 5.32008px rgba(155, 161, 167, 0.0282725), 0px 2.76726px 2.21381px rgba(155, 161, 167, 0.0196802)
+        display: flex
+        max-height: 108px
+        position: relative
+        padding: 33px 33px 33px 108px
+        width: 280px
+        &__text
+            font-size: 18px
+            line-height: 22px
+            color: $parameter
+        &__image
+            position: absolute
+            bottom: -35px
+            left: -22px
+.parameter1
+    margin-right: 280px
+    &::after
+        content: ''
+        width: 59px
+        height: 1px
+        position: absolute
+        background-color: #000
+        top: 50%
+        right: -55px
+    &::before
+        content: ''
+        background: url('../img/parameters-dot.png')
+        position: absolute
+        top: 38%
+        right: -81px
+        width: 27px
+        height: 29px
+
+.parameter2
+    position: absolute
+    bottom: 233px
+    right: 180px
+    &::after
+        content: ''
+        width: 59px
+        height: 1px
+        position: absolute
+        background-color: #000
+        top: 50%
+        right: 285px
+    &::before
+        content: ''
+        background: url('../img/parameters-dot2.png')
+        position: absolute
+        top: 38%
+        right: 344px
+        width: 27px
+        height: 29px
