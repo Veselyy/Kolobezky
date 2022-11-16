@@ -27,8 +27,13 @@ body {
 }
 
 .navbar {
-  padding: 70px 0 100px 0;
+  padding-bottom: 100px;
   z-index: 1;
+}
+@media (max-width: 720px) {
+  .navbar {
+    padding-bottom: 70px;
+  }
 }
 .navbar-block {
   display: flex;
@@ -48,6 +53,11 @@ body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
+@media (max-width: 500px) {
+  .navbar-block__button {
+    display: none;
+  }
+}
 .navbar-block__button img {
   margin-right: 10px;
 }
@@ -61,12 +71,22 @@ body {
 .header {
   padding: 70px 0 300px 0;
 }
+@media (max-width: 720px) {
+  .header {
+    padding: 0;
+  }
+}
 .header-block {
   display: flex;
   justify-content: space-between;
 }
 .header-text {
   flex-basis: 50%;
+}
+@media (max-width: 1700px) {
+  .header-text {
+    flex-basis: 100%;
+  }
 }
 .header-text__title {
   font-size: 128px;
@@ -76,6 +96,19 @@ body {
   font-weight: 700;
   margin: 0 0 50px 0;
 }
+@media (max-width: 720px) {
+  .header-text__title {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .header-text__title {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
 .header-text__desc {
   font-size: 22px;
   line-height: 30px;
@@ -84,9 +117,21 @@ body {
   margin-bottom: 95px;
   display: block;
 }
+@media (max-width: 720px) {
+  .header-text__desc {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 50px;
+  }
+}
 .header-buttons {
   align-items: center;
   display: flex;
+}
+@media (max-width: 600px) {
+  .header-buttons {
+    flex-direction: column;
+  }
 }
 .header-buttons__button {
   font-size: 22px;
@@ -95,6 +140,13 @@ body {
   border: none;
   background-color: #fff;
   margin-right: 93px;
+}
+@media (max-width: 600px) {
+  .header-buttons__button {
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
 }
 .header-buttons__button:last-child {
   margin-right: 0;
@@ -105,28 +157,40 @@ body {
   display: inline-flex;
   margin: 0;
 }
+@media (max-width: 600px) {
+  .button-phone {
+    flex-direction: column-reverse;
+  }
+}
 .button-phone img {
   margin-right: 12px;
 }
 
-.header-slider {
-  flex-basis: 50%;
-  display: flex;
-  justify-content: flex-end;
+@media (max-width: 1700px) {
+  .header-image {
+    display: none;
+  }
 }
-.header-slider__image img {
+.header-image__img img {
   position: absolute;
   top: -300px;
-  right: -170px;
+  right: -220px;
   z-index: -1;
 }
 .header-desc {
+  position: absolute;
+  top: 0;
+  right: 0;
   background-color: #031641;
   border-radius: 32px;
   padding: 32px;
   max-width: 294px;
   max-height: 294px;
-  position: relative;
+}
+@media (max-width: 1700px) {
+  .header-desc {
+    display: none;
+  }
 }
 .header-desc__title {
   font-size: 36px;
@@ -142,70 +206,4 @@ body {
   color: rgba(255, 255, 255, 0.65);
   display: flex;
   margin-bottom: 45px;
-}
-.header-parameters {
-  background-color: #fbfbfb;
-  border-radius: 32px;
-  box-shadow: 0px 100px 80px rgba(155, 161, 167, 0.07), 0px 41.7776px 33.4221px rgba(155, 161, 167, 0.0503198), 0px 22.3363px 17.869px rgba(155, 161, 167, 0.0417275), 0px 12.5216px 10.0172px rgba(155, 161, 167, 0.035), 0px 6.6501px 5.32008px rgba(155, 161, 167, 0.0282725), 0px 2.76726px 2.21381px rgba(155, 161, 167, 0.0196802);
-  display: flex;
-  max-height: 108px;
-  position: relative;
-  padding: 33px 33px 33px 108px;
-  width: 280px;
-}
-.header-parameters__text {
-  font-size: 18px;
-  line-height: 22px;
-  color: rgba(0, 0, 0, 0.65);
-}
-.header-parameters__image {
-  position: absolute;
-  bottom: -35px;
-  left: -22px;
-}
-
-.parameter1 {
-  margin-right: 280px;
-}
-.parameter1::after {
-  content: "";
-  width: 59px;
-  height: 1px;
-  position: absolute;
-  background-color: #000;
-  top: 50%;
-  right: -55px;
-}
-.parameter1::before {
-  content: "";
-  background: url("../img/parameters-dot.png");
-  position: absolute;
-  top: 38%;
-  right: -81px;
-  width: 27px;
-  height: 29px;
-}
-
-.parameter2 {
-  position: absolute;
-  bottom: 233px;
-  right: 180px;
-}
-.parameter2::after {
-  content: "";
-  width: 59px;
-  height: 1px;
-  position: absolute;
-  background-color: #000;
-  top: 50%;
-  right: 285px;
-}
-.parameter2::before {
-  content: "";
-  background: url("../img/parameters-dot2.png");
-  position: absolute;
-  top: 38%;
-  right: 344px;
-  width: 27px;
-  height: 29px;
 }/*# sourceMappingURL=style.css.map */
