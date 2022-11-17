@@ -20,6 +20,10 @@ body
     font-size: 22px
     line-height: 30px
     margin-right: 93px
+.section-title
+    font-size: 96px
+    line-height: 100px
+    +bold
 
 
 .navbar
@@ -54,7 +58,7 @@ body
 
 
 .header
-    padding: 70px 0 300px 0
+    padding: 70px 0 360px 0
     @media ( max-width: 720px )
         padding: 0
     &-block
@@ -150,3 +154,125 @@ body
             color: rgba(255, 255, 255, 0.65)
             display: flex
             margin-bottom: 45px
+
+
+.about
+    @media ( max-width: 720px )
+        padding-top: 150px
+    &-block
+        padding: 100px 100px 120px 100px
+        background-image: linear-gradient(to top, #062a80 0%, #020b23 100%)
+        border-radius: 100px
+        @media ( max-width: 720px )
+            padding: 70px
+            padding-bottom: 90px
+        @media ( max-width: 450px )
+            padding: 20px
+            border-radius: 50px
+        &__title
+            color: $text
+            margin: 0
+            margin-bottom: 150px
+            @media ( max-width: 720px )
+                margin-bottom: 80px
+                font-size: 50px
+            @media ( max-width: 450px )
+                margin-bottom: 65px
+            
+    &-wrap
+        display: flex
+        justify-content: space-between
+        @media ( max-width: 1600px )
+            flex-direction: column
+        &__item
+            max-width: 440px
+            @media ( max-width: 1600px )
+                margin-bottom: 70px
+        &__icon
+            width: 72px
+            height: 72px
+            margin-bottom: 40px
+        &__text
+            font-size: 36px
+            line-height: 40px
+            +bold
+            color: rgba(251, 251, 251, 0.45)
+            @media ( max-width: 720px )
+                font-size: 20px
+                line-height: 28px
+            strong
+                color: $about-tx
+.offer
+    padding: 250px 0
+    &__title
+        color: $title
+        margin: 0
+        margin-bottom: 117px
+    &-slider
+        display: flex
+    &-item
+        display: flex
+        border-radius: 40px
+        border: 1px solid rgba(0, 0, 0, 0.03)
+        background-color: $offer-item-bg
+        transition: 0.2s
+        margin-right: 32px
+        max-width: 829px
+        &:hover
+            box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
+    &-text
+        flex-basis: 50%
+        padding-left: 65px
+        &__title
+            font-size: 36px
+            line-height: 40px
+            color: $title
+            +bold
+            margin: 65px 0 30px 0
+        &__desc
+            font-size: 22px
+            line-height: 30px
+            color: $offer-desc
+            display: block
+            margin-bottom: 60px
+        &__button
+            padding: 26px 38px 22px 24px
+            background-color: $button-bg
+            border-radius: 28px
+            border: none
+            cursor: pointer
+            strong
+                font-size: 36px
+                line-height: 40px
+                +bold
+                color: $text
+        &__buy
+            align-items: center
+            display: flex
+            margin-bottom: 12px
+            img
+                margin-right: 11px
+            span
+                font-size: 18px
+                line-height: 26px
+                color: $text
+                +reg
+    &-image
+        flex-basis: 50%
+        position: relative
+        &__card
+            padding: 17px
+            font-size: 22px
+            line-height: 30px
+            background-color: $card-bg
+            color: $text
+            +bold
+            position: absolute
+            top: 50px
+            right: 50px
+.arrows
+    max-width: 100px
+    display: flex
+    justify-content: space-between
+    margin: auto
+    margin-top: 80px

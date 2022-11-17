@@ -9,6 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/slick-theme.css">
 </head>
 <body>
     <nav class="navbar">
@@ -59,9 +61,125 @@
                 </div>
             </div>
         </header>
+        <section class="about">
+            <div class="container">
+                <div class="about-block">
+                    <h2 class="section-title about-block__title">Proč my</h2>
+                    <div class="about-wrap">
+                        <div class="about-wrap__item">
+                            <div class="about-wrap__icon">
+                                <img src="./img/icon1.svg" alt="Icona 1">
+                            </div>
+                            <span class="about-wrap__text">
+                                <strong>Rychlost objednávky —</strong> <br> koloběžka u Vás v den objednání
+                            </span>
+                        </div>
+                        <div class="about-wrap__item">
+                            <div class="about-wrap__icon">
+                                <img src="./img/icon2.svg" alt="Icona 2">
+                            </div>
+                            <span class="about-wrap__text">
+                                <strong>Roky zkušeností —</strong> <br> na trhu již 12 let
+                            </span>
+                        </div>
+                        <div class="about-wrap__item">
+                            <div class="about-wrap__icon">
+                                <img src="./img/icon3.svg" alt="Icona 3">
+                            </div>
+                            <span class="about-wrap__text">
+                                <strong>Důvěra zákazníků —</strong> <br> 362 kladných recenzí
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offer">
+            <div class="container">
+                <h2 class="section-title offer__title">V prodeji</h2>
+                    <div class="offer-slider">
+                        <div class="offer-item">
+                            <div class="offer-text">
+                                <h3 class="offer-text__title">MIDWAY Yamato 0810</h3>
+                                <span class="offer-text__desc">Baterie 6800 Ah, <br> max. rychlost 30 km/h, <br> max. zatížení 120 kg</span>
+                                <button class="offer-text__button">
+                                    <div class="offer-text__buy">
+                                        <img src="./img/buy-icon.svg" alt="Taška"><span>Koupit za <br></span>
+                                    </div> <strong>18 490 kč</strong>
+                                </button>
+                            </div>
+                            <div class="offer-image">
+                                <div class="offer-image__img">
+                                    <img src="./img/kolobezka1.png" alt="Koloběžka1">
+                                </div>
+                                <span class="offer-image__card">New</span>
+                            </div> 
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-text">
+                                <h3 class="offer-text__title">AOVO S3 2021</h3>
+                                <span class="offer-text__desc">Baterie 5380 Ah, <br> maximální rychlost 24 km/h, <br> maximální nosnost 132 kg</span>
+                                <button class="offer-text__button">
+                                    <div class="offer-text__buy">
+                                        <img src="./img/buy-icon.svg" alt="Taška"><span>Koupit za <br></span>
+                                    </div> <strong>17 900 kč</strong>
+                                </button>
+                            </div>
+                            <div class="offer-image">
+                                <div class="offer-image__img">
+                                    <img src="./img/kolobezka2.png" alt="Koloběžka1">
+                                </div>
+                                <span class="offer-image__card">New</span>
+                            </div> 
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-text">
+                                <h3 class="offer-text__title">MIDWAY Yamato 0810</h3>
+                                <span class="offer-text__desc">Baterie 6800 Ah, <br> max. rychlost 30 km/h, <br> max. zatížení 120 kg</span>
+                                <button class="offer-text__button">
+                                    <div class="offer-text__buy">
+                                        <img src="./img/buy-icon.svg" alt="Taška"><span>Koupit za <br></span>
+                                    </div> <strong>18 490 kč</strong>
+                                </button>
+                            </div>
+                            <div class="offer-image">
+                                <div class="offer-image__img">
+                                    <img src="./img/kolobezka1.png" alt="Koloběžka1">
+                                </div>
+                                <span class="offer-image__card">New</span>
+                            </div> 
+                        </div>
+                        <div class="offer-item">
+                            <div class="offer-text">
+                                <h3 class="offer-text__title">AOVO S3 2021</h3>
+                                <span class="offer-text__desc">Baterie 5380 Ah, <br> maximální rychlost 24 km/h, <br> maximální nosnost 132 kg</span>
+                                <button class="offer-text__button">
+                                    <div class="offer-text__buy">
+                                        <img src="./img/buy-icon.svg" alt="Taška"><span>Koupit za <br></span>
+                                    </div> <strong>17 900 kč</strong>
+                                </button>
+                            </div>
+                            <div class="offer-image">
+                                <div class="offer-image__img">
+                                    <img src="./img/kolobezka2.png" alt="Koloběžka1">
+                                </div>
+                                <span class="offer-image__card">New</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="arrows">
+                        <div class="arrows__left">
+                            <img src="./img/arrow-left.png" alt="Šipka doleva">
+                        </div>
+                        <div class="arrows__right">
+                            <img src="./img/arrow-right.png" alt="Šipka doprava">
+                        </div>
+                    </div>
+            </div>
+        </section>
     </main>
-
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="./js/slick.min.js"></script>
 <script src="./js/main.js"></script>
 
 </body>

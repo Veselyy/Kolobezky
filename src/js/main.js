@@ -14,4 +14,18 @@ $(document).ready(function(){
         $('#button-phone').mouseleave(function(){
             $(this).removeClass('button-hover') & $(this).addClass('header-buttons__button') & $('#img').attr('src','./img/phone.png');
         })
+
+    $('.offer-slider').slick({
+        slidesToShow: 2,
+        prevArrow: $('.arrows__left'),
+        nextArrow: $('.arrows__right'),
+        responsive: [
+            {
+              breakpoint: 2500,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+        ]
+    });
 });
