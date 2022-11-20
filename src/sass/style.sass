@@ -203,7 +203,7 @@ body
             strong
                 color: $about-tx
 .offer
-    padding: 250px 0
+    padding: 150px 0
     &__title
         color: $title
         margin: 0
@@ -276,3 +276,93 @@ body
     justify-content: space-between
     margin: auto
     margin-top: 80px
+
+
+.opinion
+    padding: 100px 0 300px 0
+    &-block
+        display: flex
+    &-desc
+        flex-basis: 35%
+        &__title
+            margin: 0
+            margin-bottom: 380px
+    &-name
+        &__subtitle
+            font-size: 22px
+            line-height: 30px
+            color: $opinion-text
+            display: block
+            margin-bottom: 8px
+        &__title
+            font-size: 36px
+            line-height: 40px
+            +bold
+            margin: 0
+    &-slider
+        flex-basis: 65%
+        display: flex
+        justify-content: space-between
+    &-text
+        &__opinion
+            font-size: 36px
+            line-height: 40px
+            +bold
+            color: rgba(0, 0, 0, 0.45)
+            margin: 0
+            margin-bottom: 120px
+            strong
+                color: $title
+        &__author
+            font-size: 22px
+            line-height: 30px
+            color: $title
+    &-arrows
+        display: flex
+        width: 92px
+        justify-content: space-between
+        margin-bottom: 270px
+
+
+.footer
+    padding: 80px 200px 80px 100px
+    background-color: $footer-bg
+    &-wrap
+        display: flex
+        justify-content: space-between
+    &-item
+        &__logo
+            margin-bottom: 180px
+        &__link
+            text-decoration: none
+            font-size: 22px
+            line-height: 30px
+            color: $link
+            +bold
+        &__title
+            font-size: 22px
+            line-height: 30px
+            color: $title
+            +bold
+            margin: 0
+            margin-bottom: 32px
+        &__text
+            font-size: 22px
+            line-height: 45px
+            color: $footer-text
+            margin-bottom: 55px
+            display: block
+        &__email
+            font-size: 22px
+            line-height: 30px
+            color: $title
+            +bold
+            margin: 0
+            margin-bottom: 26px
+            text-decoration: none
+            display: block
+        &__socials
+            a
+                margin-right: 24px
+
+
