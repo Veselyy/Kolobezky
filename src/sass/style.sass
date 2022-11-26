@@ -5,11 +5,14 @@
     box-sizing: border-box
 body
     +reg
+    margin: 0
 .container
     max-width: 1721px
     width: 96%
     margin: auto
     position: relative
+    @media ( max-width: 720px )
+        width: 90%
 .button-hover
     background-color: $button-bg
     padding: 32px 64px
@@ -28,9 +31,14 @@ body
 
 .navbar
     padding-bottom: 100px
+    padding-top: 70px
     z-index: 1
     @media ( max-width: 720px )
         padding-bottom: 70px
+        padding-top: 40px
+    @media ( max-width: 450px )
+        padding-bottom: 50px
+        padding-top: 20px
     &-block
         display: flex
         justify-content: space-between
@@ -66,7 +74,7 @@ body
         justify-content: space-between
     &-text
         flex-basis: 50%
-        @media ( max-width: 1700px )
+        @media ( max-width: 2200px )
             flex-basis: 100%
         &__title
             font-size: 128px
@@ -74,10 +82,17 @@ body
             color: $title
             +bold
             margin: 0 0 50px 0
+            @media ( max-width: 1200px )
+                font-size: 70px
+                margin-bottom: 75px
+                line-height: 90px
             @media ( max-width: 720px )
                 font-size: 50px
                 line-height: 55px
-                margin-bottom: 20px
+                margin-bottom: 50px
+            @media ( max-width: 600px )
+                font-size: 35px
+                line-height: 45px
             @media ( max-width: 450px )
                 font-size: 30px
                 line-height: 35px
@@ -122,7 +137,7 @@ body
         margin-right: 12px
 .header
     &-image
-        @media ( max-width: 1700px )
+        @media ( max-width: 2200px )
             display: none
         &__img
             img
@@ -132,7 +147,7 @@ body
                 z-index: -1
 
     &-desc
-        @media ( max-width: 1700px )
+        @media ( max-width: 2200px )
             display: none
         position: absolute
         top: 0
@@ -159,6 +174,8 @@ body
 .about
     @media ( max-width: 720px )
         padding-top: 150px
+    @media ( max-width: 450px )
+        padding-top: 120px
     &-block
         padding: 100px 100px 120px 100px
         background-image: linear-gradient(to top, #062a80 0%, #020b23 100%)
@@ -178,6 +195,7 @@ body
                 font-size: 50px
             @media ( max-width: 450px )
                 margin-bottom: 65px
+                font-size: 28px
             
     &-wrap
         display: flex
@@ -188,10 +206,19 @@ body
             max-width: 440px
             @media ( max-width: 1600px )
                 margin-bottom: 70px
+            @media ( max-width: 450px )
+                max-width: 300px
         &__icon
             width: 72px
             height: 72px
             margin-bottom: 40px
+            @media ( max-width: 450px )
+                margin-bottom: 10px
+            img
+                @media ( max-width: 600px )
+                    width: 65px
+                @media ( max-width: 450px )
+                    width: 58px
         &__text
             font-size: 36px
             line-height: 40px
@@ -200,41 +227,77 @@ body
             @media ( max-width: 720px )
                 font-size: 20px
                 line-height: 28px
+            @media ( max-width: 450px )
+                font-size: 16px
+                line-height: 24px
             strong
                 color: $about-tx
+                @media ( max-width: 450px )
+                    font-size: 18px
 .offer
     padding: 150px 0
+    @media ( max-width: 720px )
+        padding: 100px 0 50px 0
     &__title
         color: $title
         margin: 0
         margin-bottom: 117px
+        @media ( max-width: 1750px )
+            text-align: center
+        @media ( max-width: 720px )
+            font-size: 50px
+        @media ( max-width: 450px )
+            font-size: 28px
+            margin-bottom: 40px
     &-slider
         display: flex
+        justify-content: space-between
+        @media ( max-width: 1800px )
+            flex-direction: column
+            align-items: center
     &-item
         display: flex
         border-radius: 40px
         border: 1px solid rgba(0, 0, 0, 0.03)
         background-color: $offer-item-bg
         transition: 0.2s
-        margin-right: 32px
-        max-width: 829px
+        padding: 45px
+        @media ( max-width: 1800px )
+            margin-bottom: 60px
+        @media ( max-width: 900px )
+            flex-direction: column
         &:hover
             box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
     &-text
         flex-basis: 50%
-        padding-left: 65px
+        max-width: 288px
+        @media ( max-width: 720px )
+            max-width: 240px
+        @media ( max-width: 450px )
+            max-width: 200px
         &__title
+            margin: 0
             font-size: 36px
             line-height: 40px
             color: $title
             +bold
-            margin: 65px 0 30px 0
+            margin-bottom: 30px
+            @media ( max-width: 720px )
+                font-size: 28px
+            @media ( max-width: 450px )
+                font-size: 24px
         &__desc
             font-size: 22px
             line-height: 30px
             color: $offer-desc
             display: block
             margin-bottom: 60px
+            @media ( max-width: 720px )
+                font-size: 18px
+                line-height: 24px
+            @media ( max-width: 450px )
+                font-size: 16px
+                line-height: 22px
         &__button
             padding: 26px 38px 22px 24px
             background-color: $button-bg
@@ -246,6 +309,10 @@ body
                 line-height: 40px
                 +bold
                 color: $text
+                @media ( max-width: 720px )
+                    font-size: 28px
+                @media ( max-width: 450px )
+                    font-size: 24px
         &__buy
             align-items: center
             display: flex
@@ -257,9 +324,13 @@ body
                 line-height: 26px
                 color: $text
                 +reg
+                @media ( max-width: 720px )
+                    font-size: 16px
     &-image
         flex-basis: 50%
         position: relative
+        @media ( max-width: 900px )
+            margin-top: 100px
         &__card
             padding: 17px
             font-size: 22px
@@ -268,41 +339,111 @@ body
             color: $text
             +bold
             position: absolute
-            top: 50px
-            right: 50px
+            top: 30px
+            right: 0
+            @media ( max-width: 900px )
+                top: 0
+                right: 0
+            @media ( max-width: 720px )
+                font-size: 18px
+                padding: 14px
+            @media ( max-width: 450px )
+                font-size: 16px
+                padding: 10px
+        &__img
+            img
+                @media ( max-width: 900px )
+                    max-width: 270px
+                    max-height: 450px
+                    object-fit: fill
+                @media ( max-width: 720px )
+                    max-width: 240px
+                @media ( max-width: 450px )
+                    max-width: 200px
 .arrows
     max-width: 100px
     display: flex
     justify-content: space-between
     margin: auto
     margin-top: 80px
+    @media ( max-width: 450px )
+        margin-top: 0
 
 
 .opinion
     padding: 100px 0 300px 0
+    @media ( max-width: 720px )
+        padding: 50px 0 80px 0
     &-block
         display: flex
+        @media ( max-width: 1750px )
+            flex-direction: column
     &-desc
         flex-basis: 35%
+        @media ( max-width: 1750px )
+            margin: auto
+            margin-bottom: 100px
+        @media ( max-width: 450px )
+            margin-bottom: 65px
         &__title
             margin: 0
             margin-bottom: 380px
+            @media ( max-width: 1750px )
+                text-align: center
+                margin-bottom: 200px
+                @media ( max-width: 720px )
+                    font-size: 50px
+                    margin-bottom: 100px
+                    line-height: 60px
+                @media ( max-width: 600px )
+                    font-size: 50px
+                @media ( max-width: 450px )
+                    font-size: 28px
+                    line-height: 35px
+                    margin-bottom: 60px
     &-name
+        @media ( max-width: 1750px )
+            text-align: center
         &__subtitle
             font-size: 22px
             line-height: 30px
             color: $opinion-text
             display: block
             margin-bottom: 8px
+            @media ( max-width: 720px )
+                font-size: 18px
+            @media ( max-width: 600px )
+                margin: 0
         &__title
             font-size: 36px
             line-height: 40px
             +bold
             margin: 0
+            @media ( max-width: 720px )
+                font-size: 20px
     &-slider
         flex-basis: 65%
         display: flex
         justify-content: space-between
+        @media ( max-width: 1750px )
+            flex-direction: column
+            margin: auto
+            align-items: center
+    &-image
+        width: 472px
+        @media ( max-width: 1750px )
+            margin-bottom: 100px
+        @media ( max-width: 720px )
+            width: 300px
+        @media ( max-width: 450px )
+            width: 250px
+            margin-bottom: 60px
+        &__img
+            img
+                @media ( max-width: 720px )
+                    width: 300px
+                @media ( max-width: 450px )
+                    width: 250px
     &-text
         &__opinion
             font-size: 36px
@@ -311,34 +452,68 @@ body
             color: rgba(0, 0, 0, 0.45)
             margin: 0
             margin-bottom: 120px
+            @media ( max-width: 720px )
+                font-size: 20px
+                line-height: 30px
+                margin-bottom: 80px
+            @media ( max-width: 600px )
+                font-size: 18px
+                line-height: 25px
+            @media ( max-width: 450px )
+                font-size: 16px
+                line-height: 22px
+                margin-bottom: 50px
             strong
                 color: $title
         &__author
             font-size: 22px
             line-height: 30px
             color: $title
+            @media ( max-width: 1750px )
+                margin: auto
+                text-align: center
+                display: block
+                margin-top: 150px
+            @media ( max-width: 720px )
+                margin-top: 100px
+                font-size: 18px
+                line-height: 26px
+            @media ( max-width: 450px )
+                font-size: 16px
+                line-height: 23px
+                margin-top: 70px
     &-arrows
         display: flex
         width: 92px
         justify-content: space-between
         margin-bottom: 270px
+        @media ( max-width: 1750px )
+            margin: auto
 
 
 .footer
-    padding: 80px 200px 80px 100px
+    padding: 80px 0
     background-color: $footer-bg
     &-wrap
         display: flex
         justify-content: space-between
+        @media ( max-width: 1450px )
+            flex-direction: column
     &-item
+        @media ( max-width: 1450px )
+            margin-bottom: 75px
         &__logo
             margin-bottom: 180px
+            @media ( max-width: 1450px )
+                margin-bottom: 30px
         &__link
             text-decoration: none
             font-size: 22px
             line-height: 30px
             color: $link
             +bold
+            @media ( max-width: 600px )
+                font-size: 16px
         &__title
             font-size: 22px
             line-height: 30px
@@ -346,12 +521,21 @@ body
             +bold
             margin: 0
             margin-bottom: 32px
+            @media ( max-width: 600px )
+                font-size: 18px
+                margin-bottom: 20px
         &__text
             font-size: 22px
             line-height: 45px
             color: $footer-text
             margin-bottom: 55px
             display: block
+            @media ( max-width: 1450px )
+                margin-bottom: 0
+                line-height: 35px
+            @media ( max-width: 600px )
+                font-size: 16px
+                line-height: 22px
         &__email
             font-size: 22px
             line-height: 30px
@@ -361,6 +545,8 @@ body
             margin-bottom: 26px
             text-decoration: none
             display: block
+            @media ( max-width: 600px )
+                font-size: 18px
         &__socials
             a
                 margin-right: 24px

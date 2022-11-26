@@ -100,7 +100,7 @@
 }
 .slick-initialized .slick-slide
 {
-    display: flex;
+    display: block;
 }
 .slick-loading .slick-slide
 {
