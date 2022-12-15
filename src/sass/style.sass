@@ -241,21 +241,20 @@ body
     &__title
         color: $title
         margin: 0
-        margin-bottom: 117px
         @media ( max-width: 1750px )
             text-align: center
         @media ( max-width: 720px )
             font-size: 50px
         @media ( max-width: 450px )
             font-size: 28px
-            margin-bottom: 40px
-    &-slider
-        display: flex
-        justify-content: space-between
-        @media ( max-width: 1800px )
-            flex-direction: column
-            align-items: center
     &-item
+        margin-right: 35px
+        justify-content: center
+        &:last-child
+            margin-right: 0
+        @media ( max-width: 760px )
+            margin-right: 0
+    &-block
         display: flex
         border-radius: 40px
         border: 1px solid rgba(0, 0, 0, 0.03)
@@ -264,17 +263,19 @@ body
         padding: 45px
         @media ( max-width: 1800px )
             margin-bottom: 60px
-        @media ( max-width: 900px )
+        @media ( max-width: 1700px )
+            justify-content: space-between
+        @media ( max-width: 760px )
             flex-direction: column
         &:hover
             box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1)
     &-text
         flex-basis: 50%
-        max-width: 288px
-        @media ( max-width: 720px )
-            max-width: 240px
-        @media ( max-width: 450px )
-            max-width: 200px
+        max-width: 300px
+        margin-right: 90px
+        @media ( max-width: 760px )
+            margin-bottom: 70px
+            margin-right: 0
         &__title
             margin: 0
             font-size: 36px
@@ -286,6 +287,7 @@ body
                 font-size: 28px
             @media ( max-width: 450px )
                 font-size: 24px
+                line-height: 32px
         &__desc
             font-size: 22px
             line-height: 30px
@@ -298,6 +300,8 @@ body
             @media ( max-width: 450px )
                 font-size: 16px
                 line-height: 22px
+            @media ( max-width: 350px )
+                font-size: 14px
         &__button
             padding: 26px 38px 22px 24px
             background-color: $button-bg
@@ -329,12 +333,11 @@ body
     &-image
         flex-basis: 50%
         position: relative
-        @media ( max-width: 900px )
-            margin-top: 100px
         &__card
             padding: 17px
             font-size: 22px
             line-height: 30px
+            border-radius: 20px
             background-color: $card-bg
             color: $text
             +bold
@@ -364,10 +367,20 @@ body
     max-width: 100px
     display: flex
     justify-content: space-between
-    margin: auto
-    margin-top: 80px
+    margin-bottom: 117px
+    margin-left: auto
     @media ( max-width: 450px )
-        margin-top: 0
+        margin-bottom: 40px
+    @media ( max-width: 760px )
+        margin: auto
+        margin-bottom: 40px
+        margin-top: 60px
+    @media ( max-width: 720px )
+        margin-top: 40px
+    @media ( max-width: 450px )
+        margin-top: 15px
+.arrows__right, .arrows__left
+    cursor: pointer
 
 
 .opinion
