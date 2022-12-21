@@ -1,4 +1,21 @@
 $(document).ready(function(){
+
+  //menu
+
+$('#menu').click(function(){
+  $('#navbar').slideToggle(450)
+});
+
+  $('.navbar-menu__item').click(function(){
+    $('#navbar').slideToggle(450)
+  });
+
+  
+
+
+
+    //tlačitko "Zavolejte mi"
+
     $('#button').mouseenter(function(){
     $(this).addClass('button-hover') & $(this).removeClass('header-buttons__button');
     })
