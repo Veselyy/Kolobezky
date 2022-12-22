@@ -2,35 +2,51 @@ $(document).ready(function(){
 
   //menu
 
-$('#menu').click(function(){
-  $('#navbar').slideToggle(450)
-});
+  $('#menu').click(function(){
+    $('#navbar').slideToggle(450)
+  });
 
   $('.navbar-menu__item').click(function(){
     $('#navbar').slideToggle(450)
   });
 
-  
+  //Scrollování mezi názvy pomocí menu
+
+  $(".Hlavní").click(function(){
+    $("html, body").animate({scrollTop: $("#Hlavní").offset().top},1000);
+  });
+
+  $(".Výhody").click(function(){
+    $("html, body").animate({scrollTop: $("#Výhody").offset().top},1000);
+  });
+
+  $(".Vprodeji").click(function(){
+    $("html, body").animate({scrollTop: $("#Vprodeji").offset().top},1000);
+  });
+
+  $(".Recenze").click(function(){
+    $("html, body").animate({scrollTop: $("#Recenze").offset().top},1000);
+  });
 
 
 
     //tlačitko "Zavolejte mi"
 
     $('#button').mouseenter(function(){
-    $(this).addClass('button-hover') & $(this).removeClass('header-buttons__button');
-    })
+      $(this).addClass('button-hover') & $(this).removeClass('header-buttons__button');
+    });
 
     $('#button').mouseleave(function(){
-        $(this).removeClass('button-hover') & $(this).addClass('header-buttons__button');
-    })
+      $(this).removeClass('button-hover') & $(this).addClass('header-buttons__button');
+    });
 
     $('#button-phone').mouseenter(function(){
-        $(this).addClass('button-hover') & $(this).removeClass('header-buttons__button') & $('#img').attr('src','./img/phone-hover.png');
-        })
+      $(this).addClass('button-hover') & $(this).removeClass('header-buttons__button') & $('#img').attr('src','./img/phone-hover.png');
+    });
     
-        $('#button-phone').mouseleave(function(){
-            $(this).removeClass('button-hover') & $(this).addClass('header-buttons__button') & $('#img').attr('src','./img/phone.png');
-        })
+    $('#button-phone').mouseleave(function(){
+      $(this).removeClass('button-hover') & $(this).addClass('header-buttons__button') & $('#img').attr('src','./img/phone.png');
+    });
         
    $('.offer-slider').slick({
         slidesToShow: 2,
