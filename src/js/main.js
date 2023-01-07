@@ -13,6 +13,9 @@ $(document).ready(function(){
   //Scrollování mezi názvy pomocí menu
 
   $(".Hlavní").click(function(){
+    
+    // Začne scrollovat od body nahoře až do sekce Hlavní na horní hranu po dobu 1s
+
     $("html, body").animate({scrollTop: $("#Hlavní").offset().top},1000);
   });
 
@@ -60,5 +63,10 @@ $(document).ready(function(){
               }
             }
           ]
+    });
+    $('#opinion-slider').slick({
+      slidesToShow: 1,
+      prevArrow: $('.opinion-arrows__left'),
+      nextArrow: $('.opinion-arrows__right')
     });
 });   

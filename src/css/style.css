@@ -22,14 +22,28 @@ body {
 
 .button-hover {
   background-color: #093cb5;
-  padding: 32px 64px;
-  border-radius: 100px;
-  border: none;
   color: #fff;
   cursor: pointer;
   font-size: 22px;
   line-height: 30px;
   margin-right: 93px;
+  padding: 32px 64px;
+  border-radius: 100px;
+  border: none;
+  transition: 0.2s;
+}
+@media (max-width: 720px) {
+  .button-hover {
+    padding: 20px 50px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .button-hover {
+    font-size: 16px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
 }
 
 .section-title {
@@ -235,9 +249,18 @@ body {
   border: none;
   background-color: #fff;
   margin-right: 93px;
+  padding: 32px 64px;
+  cursor: pointer;
+}
+@media (max-width: 720px) {
+  .header-buttons__button {
+    padding: 20px 50px;
+    margin-right: 20px;
+  }
 }
 @media (max-width: 600px) {
   .header-buttons__button {
+    margin: 0;
     font-size: 16px;
     margin: auto;
     margin-bottom: 40px;
@@ -251,11 +274,6 @@ body {
   align-items: center;
   display: inline-flex;
   margin: 0;
-}
-@media (max-width: 600px) {
-  .button-phone {
-    flex-direction: column-reverse;
-  }
 }
 .button-phone img {
   margin-right: 12px;
@@ -679,6 +697,7 @@ body {
 }
 .opinion-block {
   display: flex;
+  justify-content: space-between;
 }
 @media (max-width: 1750px) {
   .opinion-block {
@@ -762,13 +781,11 @@ body {
     font-size: 20px;
   }
 }
-.opinion-slider {
-  flex-basis: 65%;
+.opinion-item {
   display: flex;
-  justify-content: space-between;
 }
 @media (max-width: 1750px) {
-  .opinion-slider {
+  .opinion-item {
     flex-direction: column;
     margin: auto;
     align-items: center;
@@ -776,10 +793,12 @@ body {
 }
 .opinion-image {
   width: 472px;
+  margin-right: 85px;
 }
 @media (max-width: 1750px) {
   .opinion-image {
     margin-bottom: 100px;
+    margin-right: 0;
   }
 }
 @media (max-width: 720px) {
@@ -932,8 +951,8 @@ body {
   font-size: 22px;
   line-height: 45px;
   color: rgba(0, 0, 0, 0.65);
-  margin-bottom: 55px;
   display: block;
+  text-decoration: none;
 }
 @media (max-width: 1450px) {
   .footer-item__text {

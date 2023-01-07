@@ -15,14 +15,22 @@ body
         width: 90%
 .button-hover
     background-color: $button-bg
-    padding: 32px 64px
-    border-radius: 100px
-    border: none
     color: $text
     cursor: pointer
     font-size: 22px
     line-height: 30px
     margin-right: 93px
+    padding: 32px 64px
+    border-radius: 100px
+    border: none
+    transition: 0.2s
+    @media ( max-width: 720px )
+        padding: 20px 50px
+        margin-right: 20px
+    @media ( max-width: 600px )
+        font-size: 16px
+        margin: auto
+        margin-bottom: 40px
 .section-title
     font-size: 96px
     line-height: 100px
@@ -163,19 +171,23 @@ body
             border: none
             background-color: #fff
             margin-right: 93px
+            padding: 32px 64px
+            cursor: pointer
+            @media ( max-width: 720px )
+                padding: 20px 50px
+                margin-right: 20px
             @media ( max-width: 600px )
+                margin: 0
                 font-size: 16px
                 margin: auto
                 margin-bottom: 40px
-
+                
             &:last-child
-                margin-right: 0               
+                margin-right: 0         
 .button-phone
     align-items: center
     display: inline-flex
     margin: 0
-    @media ( max-width: 600px )
-        flex-direction: column-reverse
     img
         margin-right: 12px
 .header
@@ -432,6 +444,7 @@ body
         padding: 50px 0 80px 0
     &-block
         display: flex
+        justify-content: space-between
         @media ( max-width: 1750px )
             flex-direction: column
     &-desc
@@ -477,18 +490,18 @@ body
             margin: 0
             @media ( max-width: 720px )
                 font-size: 20px
-    &-slider
-        flex-basis: 65%
+    &-item
         display: flex
-        justify-content: space-between
         @media ( max-width: 1750px )
             flex-direction: column
             margin: auto
             align-items: center
     &-image
         width: 472px
+        margin-right: 85px
         @media ( max-width: 1750px )
             margin-bottom: 100px
+            margin-right: 0
         @media ( max-width: 720px )
             width: 300px
         @media ( max-width: 450px )
@@ -546,7 +559,6 @@ body
         @media ( max-width: 1750px )
             margin: auto
 
-
 .footer
     padding: 80px 0
     background-color: $footer-bg
@@ -584,8 +596,8 @@ body
             font-size: 22px
             line-height: 45px
             color: $footer-text
-            margin-bottom: 55px
             display: block
+            text-decoration: none
             @media ( max-width: 1450px )
                 margin-bottom: 0
                 line-height: 35px
