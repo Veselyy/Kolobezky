@@ -445,19 +445,22 @@ body
     &-block
         display: flex
         justify-content: space-between
-        @media ( max-width: 1750px )
+        position: relative
+        @media ( max-width: 1800px )
             flex-direction: column
+            position: static
     &-desc
-        flex-basis: 35%
-        @media ( max-width: 1750px )
+        width: 30%
+        @media ( max-width: 1800px )
             margin: auto
             margin-bottom: 100px
+            width: 100%
         @media ( max-width: 450px )
             margin-bottom: 65px
         &__title
             margin: 0
             margin-bottom: 380px
-            @media ( max-width: 1750px )
+            @media ( max-width: 1800px )
                 text-align: center
                 margin-bottom: 200px
                 @media ( max-width: 720px )
@@ -470,8 +473,12 @@ body
                     font-size: 28px
                     line-height: 35px
                     margin-bottom: 60px
+    &-slider
+        width: 70%
+        @media ( max-width: 1800px )
+            width: 100%
     &-name
-        @media ( max-width: 1750px )
+        @media ( max-width: 1800px )
             text-align: center
         &__subtitle
             font-size: 22px
@@ -492,14 +499,14 @@ body
                 font-size: 20px
     &-item
         display: flex
-        @media ( max-width: 1750px )
+        @media ( max-width: 1800px )
             flex-direction: column
             margin: auto
             align-items: center
     &-image
         width: 472px
         margin-right: 85px
-        @media ( max-width: 1750px )
+        @media ( max-width: 1800px )
             margin-bottom: 100px
             margin-right: 0
         @media ( max-width: 720px )
@@ -538,7 +545,7 @@ body
             font-size: 22px
             line-height: 30px
             color: $title
-            @media ( max-width: 1750px )
+            @media ( max-width: 1800px )
                 margin: auto
                 text-align: center
                 display: block
@@ -553,11 +560,18 @@ body
                 margin-top: 70px
     &-arrows
         display: flex
-        width: 92px
+        max-width: 100px
         justify-content: space-between
-        margin-bottom: 270px
-        @media ( max-width: 1750px )
-            margin: auto
+        position: absolute
+        right: 575px
+        top: 360px
+        z-index: 999
+        @media ( max-width: 1800px )
+           position: static
+           margin: auto
+           margin-bottom: 30px
+        @media ( max-width: 450px )
+            margin-bottom: 15px
 
 .footer
     padding: 80px 0

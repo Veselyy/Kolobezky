@@ -698,19 +698,22 @@ body {
 .opinion-block {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-block {
     flex-direction: column;
+    position: static;
   }
 }
 .opinion-desc {
-  flex-basis: 35%;
+  width: 30%;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-desc {
     margin: auto;
     margin-bottom: 100px;
+    width: 100%;
   }
 }
 @media (max-width: 450px) {
@@ -722,32 +725,40 @@ body {
   margin: 0;
   margin-bottom: 380px;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-desc__title {
     text-align: center;
     margin-bottom: 200px;
   }
 }
-@media (max-width: 1750px) and (max-width: 720px) {
+@media (max-width: 1800px) and (max-width: 720px) {
   .opinion-desc__title {
     font-size: 50px;
     margin-bottom: 100px;
     line-height: 60px;
   }
 }
-@media (max-width: 1750px) and (max-width: 600px) {
+@media (max-width: 1800px) and (max-width: 600px) {
   .opinion-desc__title {
     font-size: 50px;
   }
 }
-@media (max-width: 1750px) and (max-width: 450px) {
+@media (max-width: 1800px) and (max-width: 450px) {
   .opinion-desc__title {
     font-size: 28px;
     line-height: 35px;
     margin-bottom: 60px;
   }
 }
-@media (max-width: 1750px) {
+.opinion-slider {
+  width: 70%;
+}
+@media (max-width: 1800px) {
+  .opinion-slider {
+    width: 100%;
+  }
+}
+@media (max-width: 1800px) {
   .opinion-name {
     text-align: center;
   }
@@ -784,7 +795,7 @@ body {
 .opinion-item {
   display: flex;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-item {
     flex-direction: column;
     margin: auto;
@@ -795,7 +806,7 @@ body {
   width: 472px;
   margin-right: 85px;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-image {
     margin-bottom: 100px;
     margin-right: 0;
@@ -859,7 +870,7 @@ body {
   line-height: 30px;
   color: #000;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-text__author {
     margin: auto;
     text-align: center;
@@ -883,13 +894,23 @@ body {
 }
 .opinion-arrows {
   display: flex;
-  width: 92px;
+  max-width: 100px;
   justify-content: space-between;
-  margin-bottom: 270px;
+  position: absolute;
+  right: 575px;
+  top: 360px;
+  z-index: 999;
 }
-@media (max-width: 1750px) {
+@media (max-width: 1800px) {
   .opinion-arrows {
+    position: static;
     margin: auto;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 450px) {
+  .opinion-arrows {
+    margin-bottom: 15px;
   }
 }
 
