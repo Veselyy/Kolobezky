@@ -26,22 +26,26 @@ body {
   cursor: pointer;
   font-size: 22px;
   line-height: 30px;
-  margin-right: 93px;
+  margin-right: 50px;
   padding: 32px 64px;
   border-radius: 100px;
   border: none;
-  transition: 0.2s;
+  transition: 0.4s;
+}
+@media (max-width: 1300px) {
+  .button-hover {
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 }
 @media (max-width: 720px) {
   .button-hover {
     padding: 20px 50px;
-    margin-right: 20px;
   }
 }
 @media (max-width: 600px) {
   .button-hover {
     font-size: 16px;
-    margin: auto;
     margin-bottom: 40px;
   }
 }
@@ -176,13 +180,13 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 1000px) {
+  .header-block {
+    flex-direction: column;
+  }
+}
 .header-text {
   flex-basis: 50%;
-}
-@media (max-width: 1100px) {
-  .header-text {
-    max-width: 350px;
-  }
 }
 .header-text__title {
   font-size: 128px;
@@ -197,6 +201,14 @@ body {
     font-size: 70px;
     margin-bottom: 75px;
     line-height: 90px;
+  }
+}
+@media (max-width: 1000px) {
+  .header-text__title {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 720px) {
@@ -225,6 +237,7 @@ body {
   color: #000;
   margin-bottom: 95px;
   display: block;
+  max-width: 600px;
 }
 @media (max-width: 720px) {
   .header-text__desc {
@@ -233,13 +246,25 @@ body {
     margin-bottom: 50px;
   }
 }
+@media (max-width: 1000px) {
+  .header-text__desc {
+    text-align: center;
+    margin: auto;
+    margin-bottom: 85px;
+  }
+}
 .header-buttons {
   align-items: center;
   display: flex;
 }
-@media (max-width: 600px) {
+@media (max-width: 1300px) {
   .header-buttons {
     flex-direction: column;
+  }
+}
+@media (max-width: 1000px) {
+  .header-buttons {
+    justify-content: center;
   }
 }
 .header-buttons__button {
@@ -248,14 +273,20 @@ body {
   color: #093cb5;
   border: none;
   background-color: #fff;
-  margin-right: 93px;
+  margin-right: 50px;
   padding: 32px 64px;
   cursor: pointer;
+  border-radius: 100px;
+}
+@media (max-width: 1300px) {
+  .header-buttons__button {
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 }
 @media (max-width: 720px) {
   .header-buttons__button {
     padding: 20px 50px;
-    margin-right: 20px;
   }
 }
 @media (max-width: 600px) {
@@ -313,9 +344,42 @@ body {
     right: -110px;
   }
 }
-@media (max-width: 925px) {
+@media (max-width: 1000px) {
   .header-image__img img {
     display: none;
+  }
+}
+.header-image__mobile {
+  display: none;
+  margin: auto;
+  margin-bottom: 70px;
+}
+@media (max-width: 1000px) {
+  .header-image__mobile {
+    display: inline-block;
+  }
+}
+.header-image__mobile img {
+  width: 700px;
+}
+@media (max-width: 800px) {
+  .header-image__mobile img {
+    width: 600px;
+  }
+}
+@media (max-width: 725px) {
+  .header-image__mobile img {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  .header-image__mobile img {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .header-image__mobile img {
+    width: 250px;
   }
 }
 .header-desc {
@@ -339,7 +403,7 @@ body {
     top: 55px;
   }
 }
-@media (max-width: 925px) {
+@media (max-width: 1000px) {
   .header-desc {
     display: none;
   }
@@ -779,6 +843,7 @@ body {
 .opinion-desc__title {
   margin: 0;
   margin-bottom: 380px;
+  max-width: 400px;
 }
 @media (max-width: 1450px) {
   .opinion-desc__title {
@@ -789,13 +854,14 @@ body {
 @media (max-width: 925px) {
   .opinion-desc__title {
     text-align: center;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
+    max-width: none;
   }
 }
 @media (max-width: 720px) {
   .opinion-desc__title {
     font-size: 50px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
     line-height: 60px;
   }
 }
@@ -954,7 +1020,6 @@ body {
   font-size: 22px;
   line-height: 30px;
   color: #000;
-  position: relative;
 }
 @media (max-width: 925px) {
   .opinion-text__author {
@@ -981,15 +1046,11 @@ body {
 .opinion-arrows {
   display: flex;
   max-width: 100px;
+  cursor: pointer;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 999;
 }
 @media (max-width: 925px) {
   .opinion-arrows {
-    position: static;
     margin: auto;
     margin-bottom: 30px;
   }

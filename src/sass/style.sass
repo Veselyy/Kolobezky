@@ -19,17 +19,18 @@ body
     cursor: pointer
     font-size: 22px
     line-height: 30px
-    margin-right: 93px
+    margin-right: 50px
     padding: 32px 64px
     border-radius: 100px
     border: none
-    transition: 0.2s
+    transition: 0.4s
+    @media ( max-width: 1300px )
+        margin-bottom: 40px
+        margin-right: 0
     @media ( max-width: 720px )
         padding: 20px 50px
-        margin-right: 20px
     @media ( max-width: 600px )
         font-size: 16px
-        margin: auto
         margin-bottom: 40px
 .section-title
     font-size: 96px
@@ -123,10 +124,10 @@ body
     &-block
         display: flex
         justify-content: space-between
+        @media ( max-width: 1000px )
+            flex-direction: column
     &-text
         flex-basis: 50%
-        @media ( max-width: 1100px )
-            max-width: 350px
         &__title
             font-size: 128px
             line-height: 128px
@@ -137,6 +138,11 @@ body
                 font-size: 70px
                 margin-bottom: 75px
                 line-height: 90px
+            @media ( max-width: 1000px )
+                text-align: center
+                max-width: 650px
+                margin: auto
+                margin-bottom: 60px
             @media ( max-width: 720px )
                 font-size: 50px
                 line-height: 55px
@@ -155,27 +161,37 @@ body
             color: $title
             margin-bottom: 95px
             display: block
+            max-width: 600px
             @media ( max-width: 720px )
                 font-size: 16px
                 line-height: 22px
                 margin-bottom: 50px
+            @media ( max-width: 1000px )
+                text-align: center
+                margin: auto
+                margin-bottom: 85px
     &-buttons
         align-items: center
         display: flex
-        @media ( max-width: 600px )
+        @media ( max-width: 1300px )
             flex-direction: column
+        @media ( max-width: 1000px )
+            justify-content: center
         &__button
             font-size: 22px
             line-height: 30px
             color: $button-bg
             border: none
             background-color: #fff
-            margin-right: 93px
+            margin-right: 50px
             padding: 32px 64px
             cursor: pointer
+            border-radius: 100px
+            @media ( max-width: 1300px )
+                margin-bottom: 40px
+                margin-right: 0
             @media ( max-width: 720px )
                 padding: 20px 50px
-                margin-right: 20px
             @media ( max-width: 600px )
                 margin: 0
                 font-size: 16px
@@ -183,7 +199,7 @@ body
                 margin-bottom: 40px
                 
             &:last-child
-                margin-right: 0         
+                margin-right: 0       
 .button-phone
     align-items: center
     display: inline-flex
@@ -214,9 +230,24 @@ body
                     max-width: 600px
                     top: -45px
                     right: -110px
-                @media ( max-width: 925px )
+                @media ( max-width: 1000px )
                     display: none
-
+        &__mobile
+            display: none
+            margin: auto
+            margin-bottom: 70px
+            @media ( max-width: 1000px )
+                display: inline-block
+            img
+                width: 700px
+                @media ( max-width: 800px )
+                    width: 600px
+                @media ( max-width: 725px )
+                    width: 500px
+                @media ( max-width: 600px )
+                    width: 350px
+                @media ( max-width: 400px )
+                    width: 250px
     &-desc
         position: absolute
         top: 0
@@ -231,7 +262,7 @@ body
         @media ( max-width: 1100px )
             padding: 20px
             top: 55px
-        @media ( max-width: 925px )
+        @media ( max-width: 1000px )
             display: none
         &__title
             font-size: 36px
@@ -488,15 +519,17 @@ body
         &__title
             margin: 0
             margin-bottom: 380px
+            max-width: 400px
             @media ( max-width: 1450px )
                 font-size: 70px
                 line-height: 80px
             @media ( max-width: 925px )
                 text-align: center
-                margin-bottom: 200px
+                margin-bottom: 150px
+                max-width: none
             @media ( max-width: 720px )
                 font-size: 50px
-                margin-bottom: 100px
+                margin-bottom: 80px
                 line-height: 60px
             @media ( max-width: 600px )
                 font-size: 50px
@@ -588,7 +621,6 @@ body
             font-size: 22px
             line-height: 30px
             color: $title
-            position: relative
             @media ( max-width: 925px )
                 margin: auto
                 text-align: center
@@ -605,13 +637,9 @@ body
     &-arrows
         display: flex
         max-width: 100px
+        cursor: pointer
         justify-content: space-between
-        position: absolute
-        top: 0
-        right: 0
-        z-index: 999
         @media ( max-width: 925px )
-           position: static
            margin: auto
            margin-bottom: 30px
         @media ( max-width: 450px )
