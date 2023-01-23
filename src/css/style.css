@@ -297,6 +297,10 @@ body {
     margin-bottom: 40px;
   }
 }
+.header-buttons__button:first-child {
+  background-color: #093cb5;
+  color: #fff;
+}
 .header-buttons__button:last-child {
   margin-right: 0;
 }
